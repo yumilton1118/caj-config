@@ -1,0 +1,28 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: speaker01-caj-fare
+spec:
+  destination:
+    name: ''
+    namespace: speaker01
+    server: 'https://kubernetes.default.svc'
+  source:
+    path: apps/charts/spring-boot-caj-app
+    repoURL: 'https://github.com/kairen/caj-config'
+    targetRevision: dev
+    helm:
+      parameters:
+        - name: studenID
+          value: speaker01
+        - name: fullnameOverride
+          value: caj-fare
+        - name: repository
+          value: docker.io/kairen/fare
+        - name: tag
+          value: latest
+        - name: version
+          value: v1
+      valueFiles:
+        - values.yaml
+  project: student

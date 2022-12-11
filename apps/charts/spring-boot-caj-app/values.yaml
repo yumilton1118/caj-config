@@ -2,7 +2,7 @@ nameOverride: ""
 fullnameOverride: ""
 version: v1
 
-studenID: speaker01
+studenID: ""
 
 deployment:
   env: []
@@ -13,12 +13,11 @@ deployment:
     protocol: TCP
 
 image:
-  repository: docker.io/kairen/fare
+  repository: docker.io/d0ck3rj3ff/caj-fare
   tag: latest
   pullPolicy: Always
 
 route:
-  idName: speaker01
   domain: apps.penguin.rhtw.kubedev.org
 
 # Affinity configurations
