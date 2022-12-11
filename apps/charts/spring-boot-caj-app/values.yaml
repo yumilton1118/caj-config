@@ -7,10 +7,6 @@ studenID: ""
 deployment:
   env: []
   replicas: 1
-  ports:
-  - name: tcp-8080
-    containerPort: 8080
-    protocol: TCP
 
 image:
   repository: docker.io/d0ck3rj3ff/caj-fare
@@ -50,7 +46,3 @@ labels: {}
 
 # Extra annotations for the external IP services (optional)
 annotations: {}
-
-# externalIpEndpoints: []
-#   - IP: 10.160.15.199
-#     Port: 7000
