@@ -1,0 +1,57 @@
+nameOverride: ""
+fullnameOverride: ""
+version: v1
+
+studenID: speaker01
+
+deployment:
+  env: []
+  replicas: 1
+  ports:
+  - name: tcp-8080
+    containerPort: 8080
+    protocol: TCP
+
+image:
+  repository: docker.io/kairen/fare
+  tag: latest
+  pullPolicy: Always
+
+route:
+  idName: speaker01
+  domain: apps.penguin.rhtw.kubedev.org
+
+# Affinity configurations
+affinity: {}
+  # nodeAffinity:
+  #   requiredDuringSchedulingIgnoredDuringExecution:
+  #     nodeSelectorTerms:
+  #     - matchExpressions:
+  #       - key: kubernetes.io/hostname
+  #         operator: In
+  #         values:
+  #         - gke-gke-blr-default-pool-06a23412-0dkt
+
+# Tolerations and Taints (For Aerospike Pods)
+tolerations: []
+  # - key: "key1"
+  #   operator: "Equal"
+  #   value: "value1"
+  #   effect: "NoSchedule"
+  # - key: "key1"
+  #   operator: "Equal"
+  #   value: "value1"
+  #   effect: "NoExecute"
+
+# Node Selector (For Aerospike Pods)
+nodeSelector: {}
+
+# Extra labels for the Aerospike StatefulSet
+labels: {}
+
+# Extra annotations for the external IP services (optional)
+annotations: {}
+
+# externalIpEndpoints: []
+#   - IP: 10.160.15.199
+#     Port: 7000

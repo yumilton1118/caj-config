@@ -1,0 +1,19 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: {{ template "spring-boot-caj-app.fullname" . }}
+  labels:
+    app: {{ template "spring-boot-caj-app.fullname" . }}
+    service: {{ template "spring-boot-caj-app.fullname" . }}
+{{- with .Values.annotations }}
+  annotations:
+{{ toYaml . | indent 4 }}
+{{- end }}
+spec:
+  selector:
+    app: {{ template "spring-boot-caj-app.fullname" . }}
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 8080
+      name: http

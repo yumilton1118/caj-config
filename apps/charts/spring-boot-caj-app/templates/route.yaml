@@ -1,0 +1,16 @@
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: {{ template "spring-boot-caj-app.fullname" . }}
+{{- with .Values.annotations }}
+  annotations:
+{{ toYaml . | indent 4 }}
+{{- end }}
+spec:
+  host: "{{ template "spring-boot-caj-app.fullname" . }}-{{ .Values.route.idName }}.{{ .Values.route.domain }}"
+  to:
+    kind: Service
+    name: {{ template "spring-boot-caj-app.fullname" . }}
+    weight: 100
+  port:
+    targetPort: 8080
