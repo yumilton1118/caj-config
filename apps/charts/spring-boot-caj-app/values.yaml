@@ -16,7 +16,7 @@ image:
 route:
   domain: apps.penguin.rhtw.kubedev.org
 
-# Affinity configurations
+# Affinity
 affinity: {}
   # nodeAffinity:
   #   requiredDuringSchedulingIgnoredDuringExecution:
@@ -27,7 +27,7 @@ affinity: {}
   #         values:
   #         - gke-gke-blr-default-pool-06a23412-0dkt
 
-# Tolerations and Taints (For Aerospike Pods)
+# Tolerations and Taints
 tolerations: []
   # - key: "key1"
   #   operator: "Equal"
@@ -38,11 +38,11 @@ tolerations: []
   #   value: "value1"
   #   effect: "NoExecute"
 
-# Node Selector (For Aerospike Pods)
+# Node Selector
 nodeSelector: {}
 
-# Extra labels for the Aerospike StatefulSet
+# Extra labels
 labels: {}
 
-# Extra annotations for the external IP services (optional)
+# Extra annotations 
 annotations: {}
