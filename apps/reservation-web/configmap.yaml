@@ -4,4 +4,4 @@ metadata:
   name: web-config
 data:
   config.json: >
-    {"masterFileUrl":"http://caj-gateway-${STUDENT_ID}.apps.penguin.rhtw.kubedev.org","fareUrl":"http://caj-gateway-${STUDENT_ID}.apps.penguin.rhtw.kubedev.org","scheduleUrl":"http://caj-gateway-${STUDENT_ID}.apps.penguin.rhtw.kubedev.org"}
+    {"masterFileUrl":"http://caj-gateway-speaker01.apps.penguin.rhtw.kubedev.org","fareUrl":"http://caj-gateway-speaker01.apps.penguin.rhtw.kubedev.org","scheduleUrl":"http://caj-gateway-speaker01.apps.penguin.rhtw.kubedev.org"}
