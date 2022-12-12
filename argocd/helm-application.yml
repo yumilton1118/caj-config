@@ -17,9 +17,9 @@ spec:
           value: speaker01
         - name: fullnameOverride
           value: caj-fare
-        - name: repository
+        - name: image.repository
           value: docker.io/kairen/fare
-        - name: tag
+        - name: image.tag
           value: latest
         - name: version
           value: v1
