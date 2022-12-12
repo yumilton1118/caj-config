@@ -1,7 +1,7 @@
 apiVersion: console.openshift.io/v1
 kind: ConsoleLink
 metadata:
-  name: application-menu-caj-speaker01
+  name: application-menu-caj-student03
 spec:
   href: 'https://www.thsrc.com.tw/'
   location: ApplicationMenu
